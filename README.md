@@ -394,7 +394,7 @@ Issues and pull requests welcome, especially:
   for this README rather than as dependencies.
 - **Failure shapes we have not covered.** If a duplicate got past send-once, open an
   issue with how it happened.
-- **Recipient normalisation** that is wrong for your channel.
+- **Recipient normalization** that is wrong for your channel.
 
 Run the tests with `npm test`. They use an injected clock, temporary files, child
 processes for the cross-process races, and a fake SQL driver, so they are offline and
