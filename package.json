@@ -1,0 +1,58 @@
+{
+  "name": "@askeleven/send-once",
+  "version": "0.1.0",
+  "description": "A send happens once, and only while the approval behind it is still true. An idempotency ledger and perishable approvals for code that sends email, SMS, or anything else on an agent's behalf. Zero dependencies.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AskEleven",
+  "homepage": "https://github.com/askeleven/send-once",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askeleven/send-once.git"
+  },
+  "bugs": {
+    "url": "https://github.com/askeleven/send-once/issues"
+  },
+  "keywords": [
+    "idempotency",
+    "idempotent",
+    "exactly-once",
+    "deduplication",
+    "duplicate-messages",
+    "approval",
+    "human-in-the-loop",
+    "email",
+    "sms",
+    "ai-agents"
+  ],
+  "bin": {
+    "send-once": "bin/cli.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build:types": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build:types && npm test"
+  },
+  "types": "types/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^5.9.3"
+  }
+}
