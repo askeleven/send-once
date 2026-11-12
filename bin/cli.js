@@ -7,6 +7,7 @@ import { createLedger, fileStore, parseDuration, SendOnceError } from '../src/in
 import { parseLedger } from '../src/stores.js'
 import { buildAudit, formatAudit } from '../src/report.js'
 import { VERSION } from '../src/version.js'
+import { starHint } from './star-hint.js'
 
 const USAGE = `
 send-once audit <ledger.jsonl> [--older-than <duration>]
@@ -203,6 +204,7 @@ function useColour(values) {
 main(process.argv.slice(2)).then(
   (code) => {
     process.exitCode = code
+    starHint('send-once', code, process.argv.slice(2))
   },
   (error) => {
     process.stderr.write(`${error?.stack ?? error}\n`)
