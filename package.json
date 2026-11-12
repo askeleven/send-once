@@ -1,6 +1,6 @@
 {
   "name": "@askeleven/send-once",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A send happens once, and only while the approval behind it is still true. An idempotency ledger and perishable approvals for code that sends email, SMS, or anything else on an agent's behalf. Zero dependencies.",
   "type": "module",
   "license": "MIT",
